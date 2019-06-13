@@ -10,7 +10,7 @@
 		&:last-child {
 			.content-table__td {
 				padding-bottom: 0;
-				
+
 				&:before {
 					display: none;
 				}
@@ -53,14 +53,18 @@
 		font-weight: 500;
 		line-height: 14px;
 		margin-bottom: 5px;
+
+		&--grey {
+			color: #adadad;
+		}
 	}
 
 	&__content {
 		color: #000000;
-		font-family: 'PF BeauSans Pro', sans-serif;
+		font-family: 'PF BeauSans Pro Bbook', sans-serif;
 		font-size: 14px;
-		font-weight: 400;
-		line-height: 1.4;
+		font-weight: 500;
+		line-height: 1.2;
 
 		img {
 			display: inline;
@@ -72,6 +76,10 @@
 					content: '— ';
 				}
 			}
+		}
+
+		& > * + * {
+			margin-top: 5px;
 		}
 	}
 
