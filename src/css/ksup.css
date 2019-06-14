@@ -352,11 +352,30 @@ body {
 }
 .page-title {
   color: #37373f;
-  font-family: "PF Beau Sans Pro", sans-serif;
+  font-family: 'PF BeauSans Pro', sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 15px;
+}
+.title-group {
+  text-align: center;
+  padding: 12px 0;
+}
+.title-group__main {
+  color: #37373f;
+  font-family: 'PF BeauSans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.title-group__sub {
+  color: #adadad;
+  font-family: 'PF BeauSans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 }
 .box {
   background-color: #ffffff;
@@ -415,8 +434,19 @@ body {
   line-height: 14px;
   background-color: #015d96;
   text-align: center;
-  border: 1px dotted rgba(255, 255, 255, 0.3);
   padding: 8px 20px;
+}
+.table__th--bordered {
+  border: 1px dotted rgba(255, 255, 255, 0.3);
+}
+.table__th--no-bordered {
+  border: none;
+}
+.table__th--left {
+  text-align: left;
+}
+.table__th--right {
+  text-align: right;
 }
 .table__td {
   height: 48px;
@@ -430,6 +460,12 @@ body {
   border-bottom: 1px solid #ededed;
   padding: 8px 20px;
 }
+.table__td--bordered {
+  border: 1px solid #ededed;
+}
+.table__td--no-bordered {
+  border: none;
+}
 .table__td--left {
   text-align: left;
 }
@@ -442,6 +478,9 @@ body {
   font-size: 15px;
   font-weight: 700;
   line-height: 19px;
+}
+.table__tr--full-bordered th {
+  border: 1px dotted rgba(255, 255, 255, 0.3);
 }
 .table__tr--full-bordered td {
   border: 1px solid #ededed;
@@ -590,102 +629,45 @@ body {
   display: block;
   margin-top: 5px;
 }
-.block-status--denied {
+.status-block--denied {
   background-color: rgba(254, 222, 217, 0.4);
   padding-left: 5px;
   margin-left: -5px;
 }
-.title-group {
-  text-align: center;
-  padding: 12px 0;
-}
-.title-group__main {
-  color: #37373f;
+.status-inline {
+  min-height: 20px;
+  min-width: 20px;
+  display: inline-block;
   font-family: 'PF BeauSans Pro', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-.title-group__sub {
-  color: #adadad;
-  font-family: 'PF BeauSans Pro', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 19px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 18px auto;
+  padding-left: 22px;
 }
-.content-table {
-  width: 100%;
-}
-.content-table__tr:last-child .content-table__td:before {
-  display: none;
-}
-.content-table__td {
-  vertical-align: middle;
-  position: relative;
-  padding: 12px 0;
-}
-.content-table__td:before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #ededed;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.content-table__td:first-child + .content-table__td:last-child {
-  width: 50%;
-  padding-left: 20px;
-}
-.content-table__td:first-child + .content-table__td:last-child:before {
-  left: 20px;
-  width: -webkit-calc(100% - 20px);
-  width: calc(100% - 20px);
-}
-.content-table__td--top {
-  vertical-align: top;
-}
-.content-table__title {
-  display: block;
-  color: #015d96;
-  font-family: 'PF BeauSans Pro Bbook', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-  margin-bottom: 5px;
-}
-.content-table__title--grey {
-  color: #adadad;
-}
-.content-table__content {
-  color: #000000;
-  font-family: 'PF BeauSans Pro', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-.content-table__content img {
-  margin-right: 2px;
-  -webkit-transform: translateY(2px);
-  -ms-transform: translateY(2px);
-  transform: translateY(2px);
-}
-.content-table__content ul li:before {
-  content: '— ';
-}
-.content-table__content > * + * {
-  display: block;
-  margin-top: 5px;
-}
-.content-table__status {
-  padding: 7px 5px;
-  margin: -2px 0 -2px -5px;
-}
-.content-table__status--denied {
-  background-color: rgba(254, 222, 217, 0.4);
-}
-.content-table__status--denied .content-table__content {
+.status-inline--denied {
   color: #e21d1d;
+  background-image: url(../img/icon-denied.svg);
+}
+.status-inline--agreed {
+  color: #48962d;
+  background-image: url(../img/icon-agreed.svg);
+}
+.doc-link {
+  min-height: 20px;
+  min-width: 20px;
+  display: inline-block;
+  color: #0f1217;
+  font-family: 'PF BeauSans Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  background-image: url(../img/icon-doc.svg);
+  background-size: 16px 20px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 24px;
 }

@@ -10,8 +10,23 @@
 		line-height: 14px;
 		background-color: #015d96;
 		text-align: center;
-		border: 1px dotted rgba(255, 255, 255, 0.3);
 		padding: 8px 20px;
+
+		&--bordered {
+			border: 1px dotted rgba(255, 255, 255, 0.3);
+		}
+
+		&--no-bordered {
+			border: none;
+		}
+
+		&--left {
+			text-align: left;
+		}
+
+		&--right {
+			text-align: right;
+		}
 	}
 
 	&__td {
@@ -25,6 +40,14 @@
 		text-align: center;
 		border-bottom: 1px solid #ededed;
 		padding: 8px 20px;
+
+		&--bordered {
+			border: 1px solid #ededed;
+		}
+
+		&--no-bordered {
+			border: none;
+		}
 
 		&--left {
 			text-align: left;
@@ -45,6 +68,9 @@
 
 	&__tr {
 		&--full-bordered {
+			th {
+				border: 1px dotted rgba(255, 255, 255, 0.3);
+			}
 			td {
 				border: 1px solid #ededed;
 			}
