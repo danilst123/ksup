@@ -472,12 +472,9 @@ body {
 .table__td--right {
   text-align: right;
 }
-.table__td strong {
-  color: #0f1217;
-  font-family: 'PF BeauSans Pro', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 19px;
+.table__td strong,
+.table__td b {
+  font-weight: 600;
 }
 .table__td p + p {
   margin-top: 5px;
@@ -674,4 +671,11 @@ body {
   background-position: left center;
   background-repeat: no-repeat;
   padding-left: 24px;
+}
+.total-price {
+  color: #0f1217;
+  font-family: 'PF BeauSans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
 }
