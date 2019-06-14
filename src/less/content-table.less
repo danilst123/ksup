@@ -4,12 +4,12 @@
 	&__tr {	
 		&:first-child {
 			.content-table__td {
-				padding-top: 0;
+				//padding-top: 0;
 			}
 		}
 		&:last-child {
 			.content-table__td {
-				padding-bottom: 0;
+				//padding-bottom: 0;
 
 				&:before {
 					display: none;
@@ -43,6 +43,10 @@
 				width: calc(100% - 20px);
 			}
 		}
+
+		&--top {
+			vertical-align: top;
+		}
 	}
 
 	&__title {
@@ -61,13 +65,12 @@
 
 	&__content {
 		color: #000000;
-		font-family: 'PF BeauSans Pro Bbook', sans-serif;
+		font-family: 'PF BeauSans Pro', sans-serif;
 		font-size: 14px;
-		font-weight: 500;
+		font-weight: 400;
 		line-height: 1.2;
 
 		img {
-			display: inline-block;
 			margin-right: 2px;
 			transform: translateY(2px);
 		}

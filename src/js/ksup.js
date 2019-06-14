@@ -13,7 +13,7 @@ $(function() {
 		
 		$('.tabs__tab').fadeOut(0);
 
-		$('.tabs__tab#' + destination).fadeIn(400);
+		$('.tabs__tab' + destination).fadeIn(400);
 	});
 	
 

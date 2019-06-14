@@ -1,0 +1,72 @@
+.table {
+	width: 100%;
+	box-shadow: 0 1px 9px rgba(0, 48, 70, 0.03);
+
+	&__th {
+		color: #ffffff;
+		font-family: 'PF BeauSans Pro', sans-serif;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 14px;
+		background-color: #015d96;
+		text-align: center;
+		border: 1px dotted rgba(255, 255, 255, 0.3);
+		padding: 8px 20px;
+	}
+
+	&__td {
+		height: 48px;
+		color: #0f1217;
+		font-family: 'PF BeauSans Pro', sans-serif;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 19px;
+		background-color: #fff;
+		text-align: center;
+		border-bottom: 1px solid #ededed;
+		padding: 8px 20px;
+
+		&--left {
+			text-align: left;
+		}
+
+		&--right {
+			text-align: right;
+		}
+
+		strong {
+			color: #0f1217;
+			font-family: 'PF BeauSans Pro', sans-serif;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 19px;
+		}
+	}
+
+	&__tr {
+		&--full-bordered {
+			td {
+				border: 1px solid #ededed;
+			}
+		}
+
+		&--no-bordered {
+			td {
+				border: none;
+			}
+		}
+
+		&--footer {
+			td {
+				border: none;
+				color: #a2b2be;
+				background-color: #d8e6ef;
+
+				strong {
+					color: #0f1217;
+				}
+			}
+		}
+	}
+
+}
