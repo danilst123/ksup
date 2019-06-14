@@ -381,7 +381,7 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: 0 1px 9px rgba(0, 48, 70, 0.03);
   box-shadow: 0 1px 9px rgba(0, 48, 70, 0.03);
-  padding: 20px;
+  padding: 10px 20px;
 }
 .box + .box {
   margin-top: 10px;
@@ -479,6 +479,9 @@ body {
   font-weight: 700;
   line-height: 19px;
 }
+.table__td p + p {
+  margin-top: 5px;
+}
 .table__tr--full-bordered th {
   border: 1px dotted rgba(255, 255, 255, 0.3);
 }
@@ -509,7 +512,7 @@ body {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -7.5px;
+  margin: -7.5px 0;
 }
 .tabs__nav-item {
   max-width: 100%;
@@ -518,10 +521,7 @@ body {
   flex-shrink: 0;
   position: relative;
   cursor: pointer;
-  margin: 7.5px;
-}
-.tabs__nav-item:not(:last-child) {
-  margin-right: 15px;
+  margin: 7.5px 0;
 }
 .tabs__nav-item--active {
   -webkit-box-shadow: 0 1px 15px rgba(0, 48, 70, 0.08);
@@ -583,7 +583,7 @@ body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  padding: 4px 17px 0;
+  padding: 4px 18px 0;
 }
 .tabs__link:hover {
   color: #37373f;
@@ -595,7 +595,7 @@ body {
   display: none;
 }
 .block-content {
-  padding: 8px 0;
+  padding: 10px 0;
 }
 .block-content__title {
   display: block;
@@ -629,10 +629,14 @@ body {
   display: block;
   margin-top: 5px;
 }
+.status-block {
+  padding: 5px 0;
+  padding-left: 4px;
+  margin-left: -4px;
+  margin-top: -5px;
+}
 .status-block--denied {
   background-color: rgba(254, 222, 217, 0.4);
-  padding-left: 5px;
-  margin-left: -5px;
 }
 .status-inline {
   min-height: 20px;
