@@ -1,0 +1,49 @@
+.plan-form {
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__search {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  &__date {
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 20px;
+
+    time {
+      display: inline;
+      color: #000000;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+
+    * + * {
+      margin-left: 20px;
+    }
+  }
+}
