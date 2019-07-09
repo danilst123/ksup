@@ -497,6 +497,7 @@ body {
   border: 1px solid #000000;
 }
 .table--modal-table .table__td {
+  height: 60px;
   color: #000000;
   font-weight: 400;
   padding: 12px 20px;
@@ -949,11 +950,10 @@ body {
   background-size: 18px auto;
 }
 .checkbox__title {
-  color: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  color: #005d96;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 18px;
 }
 .checkbox__input:checked + .checkbox__icon {
   background-color: #005d96;
@@ -970,6 +970,9 @@ body {
 .checkbox--light .checkbox__input:checked + .checkbox__icon {
   background-color: #005d96;
   border-color: #fff;
+}
+.checkbox--light .checkbox__title {
+  color: #fff;
 }
 .search-block {
   width: 100%;
