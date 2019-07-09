@@ -1,14 +1,22 @@
 .table {
+	table-layout: fixed;
 	width: 100%;
 	box-shadow: 0 1px 9px rgba(0, 48, 70, 0.03);
 
-	&__tbody {
-		&--nowrap {
-			white-space: nowrap;
+	& + & {
+	  margin-top: 40px;
+	}
+
+	&__thead {
+		&--small-padding {
+			.table__th {
+				padding: 8px 20px;
+			}
 		}
 	}
 
 	&__th {
+		height: 43px;
 		color: #ffffff;
 		font-family: 'PF BeauSans Pro', sans-serif;
 		font-size: 13px;
@@ -16,7 +24,7 @@
 		line-height: 14px;
 		background-color: #015d96;
 		text-align: center;
-		padding: 8px 20px;
+		padding: 14px 20px;
 
 		&--bordered {
 			border: 1px dotted rgba(255, 255, 255, 0.3);
@@ -36,7 +44,7 @@
 	}
 
 	&__td {
-		height: 48px;
+		height: 40px;
 		color: #0f1217;
 		font-family: 'PF BeauSans Pro', sans-serif;
 		font-size: 13px;
@@ -99,6 +107,13 @@
 				}
 			}
 		}
+
+		&--toggable {
+			& > .table__td {
+				background-color: #d5e8f3;
+				padding: 20px;
+			}
+		}
 	}
 
 	&--modal-table {
@@ -142,7 +157,7 @@
 		.table__td {
 			color: #000000;
 			font-weight: 400;
-			padding: 13px 20px;
+			padding: 12px 20px;
 
 			&--smaller {
 				font-size: 14px;
@@ -168,6 +183,7 @@
 				.table__th {
 					border: 1px solid #000000;
 				}
+
 				.table__td {
 					border: 1px solid #d5e8f3;
 				}
@@ -178,7 +194,64 @@
 					background-color: #f4fbff;
 				}
 			}
+
+			&--toggable {
+				& > .table__td {
+					background-color: #d5e8f3;
+					padding: 20px;
+				}
+			}
 		}
 	}
+	
+	&--inner {	
+		position: relative;
 
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 11.5px 11.5px 11.5px;
+			border-color: transparent transparent #ffffff transparent;
+			position: absolute;
+			left: 38px;
+			top: -11px;
+		}	
+
+		.table__thead {
+			border-bottom: 1px solid #eaf3f9;
+		}
+
+		.table__tbody {
+			.table__tr {
+				&:last-child {
+					.table__td {
+						padding-bottom: 30px;
+					}
+				}
+			}
+		}
+
+		.table__td, 
+		.table__th {
+			background-color: #fff;
+			border: none;
+			color: #000000;
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 16px;
+			line-height: 18px;
+		}
+
+		.table__th {
+			font-weight: 700;
+			padding: 20px;
+		}
+
+		.table__td {
+			font-weight: 400;
+			padding: 10px 20px;
+		}
+	}
 }

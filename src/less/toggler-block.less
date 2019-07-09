@@ -1,0 +1,21 @@
+.toggler-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%; // ie fix
+
+  &__toggler {
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/icon-chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin-right: -5px;
+
+    &--active {
+      transform: rotateX(180deg);
+    }
+  }
+}
