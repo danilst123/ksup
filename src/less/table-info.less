@@ -1,0 +1,64 @@
+.table-info {
+  table-layout: fixed;
+  width: 100%;
+  color: #000000;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+
+  col {
+  }
+
+  td {
+    padding: 5px 10px 5px 0;
+    vertical-align: top;
+
+    &:nth-child(odd) {
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    line-height: 30px;
+    li {
+      &:before {
+        content: '· ';
+      }
+    }
+  }
+
+  a {
+    color: #016299;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--searchResult {
+    col {
+      &:nth-child(odd) {
+        width: 160px;
+      }
+    }
+  }
+
+  &--knowledgeBase {
+    col {
+      &:nth-child(odd) {
+        width: 315px;
+      }
+    }
+    td {
+      &:nth-child(even) {
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+}

@@ -67,6 +67,30 @@ $(function() {
 			.slideToggle('400');
 	});
 
+	// slide-content
+	$('.slide-content__toggler').click(function(e) {
+		var that = $(this),
+				startText = that.data('start-text'),
+				collapseText = that.data('collapse-text'),
+				speed = parseInt(that.data('speed'));
+
+		if (that.hasClass('slide-content__toggler--collapsed')) {
+			that.text(startText);
+		} else {
+			that.text(collapseText);
+
+			$('html, body').stop(true).animate({
+				scrollTop: that.closest('.slide-content').offset().top + 'px'
+			}, speed);
+		}
+
+		that
+			.toggleClass('slide-content__toggler--collapsed')
+			.closest('.slide-content')
+			.find('.slide-content__content')
+			.slideToggle(speed);
+
+	});
 
 	// Расчет максимальной высоты тела и максимальной ширины контейнера модального окна
 	function setModalSizes() {
@@ -94,8 +118,6 @@ $(function() {
 			'max-width': modalBoxMaxWidth + 'px'
 		});
 	}
-
-
 	setModalSizes(); // Расчет максимальной высоты тела и максимальной ширины контейнера модального окна
 
 

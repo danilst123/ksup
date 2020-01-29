@@ -78,6 +78,19 @@
 		p + p {
 			margin-top: 5px;
 		}
+
+		a {
+		  color: #006299;
+		  font-family: inherit;
+		  font-size: inherit;
+		  font-weight: 700;
+		  line-height: inherit;
+		  text-decoration: none;
+
+		  &:hover {
+		    text-decoration: underline;
+		  }
+		}
 	}
 
 	&__tr {
@@ -253,6 +266,34 @@
 		.table__td {
 			font-weight: 400;
 			padding: 10px 20px;
+		}
+	}
+
+	&--knowledgeBase {
+		margin-top: 40px;
+
+		.table__tr {
+			&--full-bordered {
+				.table__td {
+					border: 2px solid #eaf4f9;
+				}
+			}
+		}
+
+		.table__th,
+		.table__td {
+			font-family: "Roboto Condensed", sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+			padding: 20px;
+		}
+
+		.table__th {
+			padding: 18px 20px;
+
+			&--bordered {
+				border: 2px solid #004d7d;
+			}
 		}
 	}
 }

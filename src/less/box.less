@@ -6,4 +6,118 @@
 	& + & {
 		margin-top: 10px;
 	}
+
+  &--round {
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(131, 131, 131, 0.15);
+    border-radius: 4px;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &--logo {
+    height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--leftBordered {
+    min-height: 60px;
+    border-left: 5px solid #ffffff;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 20px 20px 20px 15px;
+
+    &Yellow {
+      border-color: #f2e59b;
+    }
+    &Green {
+      border-color: #b1f083;
+    }
+  }
+
+  &--link {
+    display: block;
+    color: #01679c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 7px;
+      background-image: url('../img/link-box-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--action {
+    display: block;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 7px;
+      background-image: url('../img/action-box-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &Red {
+      background-color: #e08484;
+
+      &:hover {
+        background-color: lighten(#e08484, 5%);
+      }
+    }
+    &Green {
+      background-color: #76c785;
+
+      &:hover {
+        background-color: lighten(#76c785, 5%);
+      }
+    }
+    &Blue {
+      background-color: #01b7ff;
+
+      &:hover {
+        background-color: lighten(#01b7ff, 5%);
+      }
+    }
+  }
+
 }
