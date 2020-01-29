@@ -55,17 +55,43 @@
   }
 
 
-  &--light &__icon {
-    border-color: #fff;
+  &--light {
+    .checkbox {
+      &__icon {
+        border-color: #fff;
+      }
+
+      &__input:checked + .checkbox__icon {
+        background-color: #005d96;
+        border-color: #fff;
+      }
+
+      &__title {
+        color: #fff;
+      }
+    }
   }
 
-  &--light &__input:checked + &__icon {
-    background-color: #005d96;
-    border-color: #fff;
-  }
+  &--searchFilter {
+    .checkbox {
+      &__icon {
+        border: 1px solid #a5c7db;
+        background-color: #ffffff;
+        margin-right: 10px;
+      }
 
-  &--light &__title {
-    color: #fff;
+      &__input:checked + .checkbox__icon {
+        background-color: #01b7ff;
+        border-color: #01b7ff;
+      }
+
+      &__title {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+    }
   }
 }
 

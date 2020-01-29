@@ -9,7 +9,7 @@
   font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   text-decoration: none;
   cursor: pointer;
   background-color: #01b7ff;
@@ -43,7 +43,28 @@
     background-color: #fff;
 
     &:hover {
-      background-color: #f3f3f3;
+      background-color: #fff;
+      color: lighten(#01b7ff, 20%);
+      border-color: lighten(#01b7ff, 20%);
+    }
+  }
+
+  &--short {
+    height: 40px; 
+    font-size: 16px;
+    font-weight: 500;  
+    padding: 0 15px;
+  }
+
+  &--search {
+    width: 100%;
+
+    svg, img {
+      max-height: 18px;
+
+      &:first-child {
+        margin-right: 7px;
+      }
     }
   }
 }

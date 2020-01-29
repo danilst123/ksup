@@ -1,31 +1,618 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+  
+  <title>Поиск</title>
 
-  <title>fk-act</title>
-
-  <link href="../css/ksup.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700,900&display=swap&subset=cyrillic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css">
+  <link rel="stylesheet" href="../css/ksup.css">
 </head>
-
 <body>
 
   <main class="main">
     <div class="container">
-      <h1 class="main-title">Развитие УЦ ФК</h1>
+      <h1 class="main-title">База знаний</h1> 
+      
+      <form action=""> 
+        <div class="columns">
+          <div class="columns__main">
+            <!-- ПОИСК -->
+            <section class="search">
+              <div class="search__fields">
+                <input type="text" placeholder="Введите ключевые слова" value="44-ФЗ PostgreSQL Федеральное казначейство" class="search__input">
+                <div class="search__select">
+                  <div class="select">
+                    <select>
+                      <option value="По названию">По названию ↑</option>
+                      <option value="2">2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="search__btn">
+                <button class="btn btn--short btn--search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><g><g><path fill="#ffffff" d="M6.336 10.724a4.382 4.382 0 0 1-4.387-4.387A4.381 4.381 0 0 1 6.336 1.95a4.38 4.38 0 0 1 4.387 4.387 4.381 4.381 0 0 1-4.387 4.387zm5.849 1l-.77-1-.273-.264a6.304 6.304 0 0 0 1.531-4.123 6.337 6.337 0 1 0-6.337 6.336 6.31 6.31 0 0 0 4.124-1.53l.263.273v.77l4.874 4.865 1.453-1.453z"/></g></g></svg>
+                  <span>Найти</span>
+                </button>
+              </div>
+            </section>  
+            
+            <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
+            <section class="search-result">
+              <div class="search-result__title">
+                <img src="../img/icon-project.svg" alt="">
+                <h6>Проект</h6>
+                <h2>ЕИС ЖКХ</h2>
+              </div>
+              <table class="search-result__table">
+                <col>
+                <col>
+                <col>
+                <col>
 
-        
+                <tr>
+                  <td>Исполнитель</td>
+                  <td>АО «ЛАНИТ»</td>
+                  <td>Заказчик</td>
+                  <td>Федеральное казначейство</td>
+                </tr>
+                <tr>
+                  <td>Подразделение</td>
+                  <td>ДКС</td>
+                  <td>Тип работ и услуг</td>
+                  <td>Разработка ПО; Тестирование ПО</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="" class="search-result__more">Подробнее</a>
+                  </td>
+                  <td></td>
+                  <td>Технологии</td>
+                  <td>PostgreSQL; Oracle Database</td>
+                </tr>
+              </table>
+              <div class="docs-slidable">
+                <div class="docs-slidable__head">Найдено в файлах <span>(3)</span></div>
+                <div class="docs-slidable__body">
+                  <div class="docs-slidable__item">Концепция развития.doc</div>
+                  <div class="docs-slidable docs-slidable--inner">
+                    <div class="docs-slidable__head">Презентация 22.10.2017 <span>(2)</span></div>
+                    <div class="docs-slidable__body">
+                      <div class="docs-slidable__item">Презентация решения.ppt</div>
+                      <div class="docs-slidable__item">Презентация решения.jpg</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="search-result">
+              <div class="search-result__title">
+                <img src="../img/icon-contract.svg" alt="">
+                <h6>Договор/Контракт</h6>
+                <h2>Сопровождение УЦ ФК в 2019 году</h2>
+              </div>
+              <table class="search-result__table">
+                <col>
+                <col>
+                <col>
+                <col>
+
+                <tr>
+                  <td>Исполнитель</td>
+                  <td>ООО «ЛАНИТ-Технологии»</td>
+                  <td>Подразделение</td>
+                  <td>Департамент корпоративных систем</td>
+                </tr>
+                <tr>
+                  <td>Заказчик</td>
+                  <td>Федеральное казначейство</td>
+                  <td>Номер</td>
+                  <td>Р/ДКС-19/23</td>
+                </tr>
+                <tr>
+                  <td>Тип работ и услуг</td>
+                  <td>Разработка ПО; Сопровождение ПО (услуги по технической поддержке ПО);</td>
+                  <td>Сроки</td>
+                  <td>10.01.2019–31.12.2019</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="" class="search-result__more">Подробнее</a>
+                  </td>
+                  <td></td>
+                  <td>Сумма</td>
+                  <td>25 402 000 ₽</td>
+                </tr>
+              </table>
+            </section>  
+            <section class="search-result">
+              <div class="search-result__title">
+                <img src="../img/icon-units.svg" alt="">
+                <h6>Подразделение</h6>
+                <h2>Департамент корпоративных систем</h2>
+              </div>
+              <table class="search-result__table">
+                <col>
+                <col>
+                <col>
+                <col>
+
+                <tr>
+                  <td>Юр. лица</td>
+                  <td>АО «ЛАНИТ», ООО «Интеграция и Проекты», ООО «ЛАНИТ-Технология»</td>
+                  <td>Тип работ и услуг</td>
+                  <td>Разработка ПО; Тестирование ПО; Сопровождение ПО (услуги по технической поддержке ПО)</td>
+                </tr>
+                <tr>
+                  <td>Заказчики</td>
+                  <td>Федеральное казначейство; ФГУП «Почта России»; Российское общество «Знание»; Газпромбанк; …</td>
+                  <td>Технологии</td>
+                  <td>Oracle Datebase; MS SharePoint 2013; MS SharePoint 2016; MS SQL; PostgreSQL</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="" class="search-result__more">Подробнее</a>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </section>
+            <section class="search-result">
+              <div class="search-result__title">
+                <img src="../img/icon-product.svg" alt="">
+                <h6>Продукт/решение/услуга</h6>
+                <h2>Электронный документооборот</h2>
+              </div>
+              <table class="search-result__table">
+                <col>
+                <col>
+                <col>
+                <col>
+
+                <tr>
+                  <td>Подразделения</td>
+                  <td>Департамент корпоративных систем</td>
+                  <td>Проекты</td>
+                  <td>ЕИС ЖКХ</td>                
+                </tr>
+                <tr>
+                  <td>
+                    <a href="" class="search-result__more">Подробнее</a>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </section>
+            <section class="search-result">
+              <div class="search-result__title">
+                <img src="../img/icon-technology.svg" alt="">
+                <h6>Технология</h6>
+                <h2>PostgreSQL</h2>
+              </div>
+              <table class="search-result__table">
+                <col>
+                <col>
+                <col>
+                <col>
+
+                <tr>
+                  <td>
+                    <a href="" class="search-result__more">Подробнее</a>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </section>
+            <section class="search-result">
+              <div class="search-result__title">
+                <img src="../img/icon-entity.svg" alt="">
+                <h6>Юр.лицо/ИП</h6>
+                <h2>Федеральное казначейство</h2>
+              </div>
+              <table class="search-result__table">
+                <col>
+                <col>
+                <col>
+                <col>
+                
+                <tr>
+                  <td>ОГРН</td>
+                  <td>1047797019830</td>
+                  <td>КПП</td>
+                  <td>771001001</td>
+                </tr>
+                <tr>
+                  <td>ИНН</td>
+                  <td>7710568760</td>
+                  <td>Отрасль</td>
+                  <td>Госсектор</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="" class="search-result__more">Подробнее</a>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </section>
+          </div>
+          <div class="columns__aside">
+            <!-- ФИЛЬТР -->
+            <div class="search-filter">
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Нужно найти</h3>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Проект</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Договор/контракт</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Подразделение</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Продукт/решение/услуга</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Технология</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Юр.лицо/ИП</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Стоимость проекта, ₽</h3>
+                <div class="cost-fields">
+                  <div class="cost-fields__item">
+                    <input type="text" value="1 000 000" class="cost-fields__input">
+                  </div>
+                  <div class="cost-fields__item">
+                    <input type="text" value="100 000 000" class="cost-fields__input">
+                  </div>
+                </div>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Заказчик</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ПАО «Сбербанк»</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Российский союз автострах-ов</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Стадион «Открытие Арена»</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Федеральное казначейство</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ФГУП «Почта России»</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Холдинги</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Газпром</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Почта России</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Росатом</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Сбербанк</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Федеральное казначейство</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Юр. лицо-исполнитель</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">АО «ЛАНИТ»</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ЗАО «Инсистемс»</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ООО «Клевер Дата»</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ООО «ЛАНИТ-Технологии»</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ООО «Норбит»</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Подразделение-исполнитель</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">ДКС</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Департамент сетевой интеграции </span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Инсистемс</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Норбит</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Онланта</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Тип работ и услуг</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Внедрение программных продуктов</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Проведение общестроительных и отделочных работ</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Проектирование, строительно- монтажные, пусконаладочные работы инженерных систем здания</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Разработка ПО</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Тестирование ПО</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Эксплуатация информационных систем</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Технологии</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">1C-Битрикс</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Java Card</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">MoodleCloud</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">MS SQL</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Oracle Datebase</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter-fieldset">
+                <h3 class="search-filter-fieldset__legend">Продукт/Решение/Услуга</h3>
+                <span class="search-filter-fieldset__all">Весь список</span>
+                <ul class="checkbox-list">
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">LanDocs Viziware</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Создание корпоративного университета</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Создание системы дистанционного обучения</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox checkbox--searchFilter">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__icon"></span>
+                      <span class="checkbox__title">Создание системы электронного тестирования</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-filter__operate">
+                <button type="reset" class="btn btn--short btn--bordered">Сбросить</button>
+                <button class="btn btn--short">Все фильтры</button>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </form>   
+
     </div>
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
   <script src="../js/ksup.js"></script>
 
 </body>
-
 </html>

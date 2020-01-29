@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+.cost-fields {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &:first-child:before {
+      content: 'от';
+      margin-right: 6px;
+    }
+    &:last-child:before {
+      content: 'до';
+      margin-right: 6px;
+    }
+  }
+
+  &__item + &__item {
+    margin-left: 8px;
+  }
+
+  &__input {
+    .form-field;
+    min-width: 0; // ff bug fix
+    height: 36px;
+    color: #000000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+    padding: 0 9px;
+  }
+}

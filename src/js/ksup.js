@@ -22,6 +22,51 @@ $(function() {
 		$(this).closest('.modal').fadeOut(400);
 	});
 
+	// Custom selects
+	$('.select').each(function(index, item) {
+	  var selectWrapper = $(this),
+	      select = selectWrapper.find('select'),
+	      isInModal = selectWrapper.parents('.modal').length ? true : false;
+
+	  select
+	    .css({'width': '100%'})
+	    .select2({
+	      allowClear: false,
+	      minimumResultsForSearch: -1,
+	      shouldFocusInput: -1,
+	      closeOnSelect: true,
+	      "language": {
+	        "noResults": function(){
+	          return "Результаты не найдены";
+	        }
+	      }
+	    })    
+	    .on('select2:open', function (e) {
+	      dropdown = $('.select2-dropdown');
+	      setModalClasses();
+	    });
+
+	  function setModalClasses() {
+	    if ( isInModal ) {
+	      if ( selectWrapper.parents('.modal').hasClass('modal--3') ) {
+	        dropdown.closest('.select2-container').addClass('select2-container--in-modal-3');
+	      } else if ( selectWrapper.parents('.modal').hasClass('modal--2') ) {
+	        dropdown.closest('.select2-container').addClass('select2-container--in-modal-2');
+	      } else {
+	        dropdown.closest('.select2-container').addClass('select2-container--in-modal');
+	      }
+	    }
+	  }
+	});
+
+	// docs slide
+	$('.docs-slidable__head').click(function(e) {
+		$(this)
+			.toggleClass('docs-slidable__head--collapsed')
+			.next()
+			.slideToggle('400');
+	});
+
 
 	// Расчет максимальной высоты тела и максимальной ширины контейнера модального окна
 	function setModalSizes() {
