@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>fk-win-1</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="../css/ksup.css" rel="stylesheet">
+</head>
+<body>
+    
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box">
+      <div class="modal__head">
+        <div class="modal__title">Добавление позиции оперативного плана</div>
+        <div class="modal__close icon-close"></div>
+      </div>
+      <div class="modal__body">
+        <form class="plan-form">
+          <div class="plan-form__body">
+            <table class="table table--modal-table">
+
+              <col width="110">
+              <col>
+              <col>
+              <col>
+
+              <thead class="table__thead">
+                <tr class="table__tr table__tr--full-bordered">
+                  <th class="table__th">Год</th>
+                  <th class="table__th">Статус наполнения</th>
+                  <th class="table__th">Интересно маркетингу</th>
+                  <th class="table__th">Статус сброшен (автоматически)</th>
+                </tr>
+              </thead>
+              <tbody class="table__tbody">
+                <tr class="table__tr table__tr--full-bordered">
+                  <td class="table__td"><strong>2019</strong></td>
+                  <td class="table__td">
+                    <div class="status-text status-text--agreed">Информации достаточно</div>
+                  </td>
+                  <td class="table__td">Да</td>
+                  <td class="table__td">02.03.2019</td>
+                </tr>
+                <tr class="table__tr table__tr--full-bordered">
+                  <td class="table__td"><strong>2018</strong></td>
+                  <td class="table__td">
+                    <div class="status-text status-text--agreed">Информации достаточно</div>
+                  </td>
+                  <td class="table__td">Да</td>
+                  <td class="table__td">02.03.2019</td>
+                </tr>
+                <tr class="table__tr table__tr--full-bordered">
+                  <td class="table__td"><strong>2017</strong></td>
+                  <td class="table__td">
+                    <div class="status-text status-text--denied">Наполнение неполное</div>
+                  </td>
+                  <td class="table__td">Нет</td>
+                  <td class="table__td">02.03.2019</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="plan-form__control plan-form__control--fullWide">
+            <button class="btn">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../js/ksup.js"></script>
+
+</body>
+</html>
