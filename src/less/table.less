@@ -2,33 +2,39 @@
 	table-layout: fixed;
 	width: 100%;
 	box-shadow: 0 1px 9px rgba(0, 48, 70, 0.03);
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 2px;
+
+	&--smaller {
+		font-family: 'PF BeauSans Pro', sans-serif;
+		font-size: 13px;
+	}
 
 	& + & {
 	  margin-top: 40px;
 	}
 
-	&__thead {
-		&--small-padding {
-			.table__th {
-				padding: 8px 20px;
-			}
-		}
+	&__caption {
+		color: #000000;
+		font-size: 18px;
+		font-weight: 700;
+		text-align: left;
+		padding: 20px;
 	}
 
 	&__th {
 		height: 43px;
 		color: #ffffff;
-		font-family: 'PF BeauSans Pro', sans-serif;
-		font-size: 13px;
-		font-weight: 600;
-		line-height: 14px;
+		font-weight: 700;
 		background-color: #015d96;
-		text-align: center;
-		padding: 14px 20px;
-
-		&--bordered {
-			border: 1px dotted rgba(255, 255, 255, 0.3);
-		}
+		border-right: 1px solid #000000;
+		border-bottom: 1px solid #000000;
+		padding: 18px 10px;
 
 		&--no-bordered {
 			border: none;
@@ -36,28 +42,28 @@
 
 		&--left {
 			text-align: left;
+			padding-left: 20px;
 		}
 
 		&--right {
 			text-align: right;
+			padding-right: 20px;
 		}
+	}
+
+	&--smaller &__th {
+		font-weight: 600;
+		border-right: 1px dotted rgba(255, 255, 255, 0.3);
+		border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 
 	&__td {
 		height: 40px;
 		color: #0f1217;
-		font-family: 'PF BeauSans Pro', sans-serif;
-		font-size: 13px;
-		font-weight: 400;
-		line-height: 19px;
-		background-color: #fff;
-		text-align: center;
-		border-bottom: 1px solid #ededed;
-		padding: 8px 20px;
-
-		&--bordered {
-			border: 1px solid #ededed;
-		}
+		border: 1px solid #d5e8f3;
+		padding: 20px 10px;
 
 		&--no-bordered {
 			border: none;
@@ -65,14 +71,27 @@
 
 		&--left {
 			text-align: left;
+			padding-left: 20px;
 		}
 
 		&--right {
 			text-align: right;
+			padding-right: 20px;
 		}
 
 		strong, b {
-			font-weight: 600;
+			font-weight: 700;
+		}
+
+		sub {
+			margin: 0;
+			color: #666666;
+			font-size: 10px;
+			bottom: 0;
+		}
+
+		time {
+			color: #999999;
 		}
 
 		p + p {
@@ -93,22 +112,12 @@
 		}
 	}
 
+	&--smaller &__td {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
 	&__tr {
-		&--full-bordered {
-			.table__th {
-				border: 1px dotted rgba(255, 255, 255, 0.3);
-			}
-			.table__td {
-				border: 1px solid #ededed;
-			}
-		}
-
-		&--no-bordered {
-			td {
-				border: none !important;
-			}
-		}
-
 		&--footer {
 			td {
 				border: none;
@@ -120,7 +129,6 @@
 				}
 			}
 		}
-
 		&--toggable {
 			& > .table__td {
 				background-color: #d5e8f3;
@@ -130,84 +138,9 @@
 	}
 
 	&--modal-table {
-		border-radius: 2px;
 		box-shadow: none;
 
-		.table__caption {
-			color: #000000;
-			font-family: 'Roboto Condensed', sans-serif;
-			font-size: 18px;
-			font-weight: 700;
-			text-align: left;
-			padding: 20px;
-		}
-
-		.table__td, 
-		.table__th {
-			font-family: 'Roboto Condensed', sans-serif;
-			font-size: 16px;
-			line-height: 18px;
-
-			sub {
-				margin: 0;
-				color: #666666;
-				font-size: 10px;
-				bottom: 0;
-			}
-
-			strong, b {
-				font-weight: 700;
-			}
-		}
-
-		.table__th {
-			color: #ffffff;
-			font-weight: 700;
-			padding: 18px 20px;
-
-			&--bordered {
-				border-right: 1px solid #000000;
-				border-bottom: 1px solid #000000;
-			}
-		}
-
-		.table__td {
-			height: 60px;
-			color: #000000;
-			font-weight: 400;
-			padding: 12px 20px;
-
-			&--smaller {
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 18px;
-
-				p + p {
-					margin-top: 0;
-				}
-			}
-
-			time {
-				color: #999999;
-			}
-
-			&--bordered {
-				border: 1px solid #d5e8f3;
-			}
-		}
-
 		.table__tr {
-			&--full-bordered {
-				.table__th {
-					border-right: 1px solid #000000;
-					border-bottom: 1px solid #000000;
-				}
-
-				.table__td {
-					border: 1px solid #d5e8f3;
-				}
-			}
-
 			&--selected {
 				.table__td {
 					background-color: #f4fbff;
@@ -276,29 +209,5 @@
 
 	&--knowledgeBase {
 		margin-top: 40px;
-
-		.table__tr {
-			&--full-bordered {
-				.table__td {
-					border: 2px solid #eaf4f9;
-				}
-			}
-		}
-
-		.table__th,
-		.table__td {
-			font-family: "Roboto Condensed", sans-serif;
-			font-size: 16px;
-			line-height: 20px;
-			padding: 20px;
-		}
-
-		.table__th {
-			padding: 18px 20px;
-
-			&--bordered {
-				border: 2px solid #004d7d;
-			}
-		}
 	}
 }

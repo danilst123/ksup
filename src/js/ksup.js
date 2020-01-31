@@ -67,6 +67,12 @@ $(function() {
 			.slideToggle('400');
 	});
 
+
+	//datepicker
+	$('.input-date').datepicker({
+	  todayButton: new Date()
+	});
+
 	// slide-content
 	$('.slide-content__toggler').click(function(e) {
 		var that = $(this),
