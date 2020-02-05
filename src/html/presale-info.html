@@ -44,7 +44,7 @@
                   <td>
                     <p><strong>Размер обеспечения заявки</strong></p>
                     <p>₽ 100 000,<sub>00</sub></p>
-                </td>
+                  </td>
                   <td>
                     <p><strong>Категория проекта</strong></p>
                     <p>Категория B</p>
@@ -159,7 +159,10 @@
             <div class="columns">
               <aside class="columns__aside">
                 <h2 class="title title--aside">Риски проекта</h2>
-                <input type="text" placeholder="Ключевое слово" class="input-text input-text--search input-text--toolbar">
+                <div class="search-block search-block--toolbar">
+                  <input type="search" placeholder="Ключевое слово" class="search-block__input">
+                  <button type="submit" class="search-block__btn"></button>
+                </div>
                 <ul class="links-list links-list--riskInfo">
                   <li class="links-list__item"><a href="" class="links-list__link">Некорректная оценка трудозатрат по проекту</a></li>
                   <li class="links-list__item"><a href="" class="links-list__link links-list__link--active">Спам-угрозы</a></li>
@@ -222,31 +225,31 @@
                     <col width="250">
                     <col>
 
-                    <tr>
+                    <tr class="table-info__tr table-info__tr--vam">
                       <td><strong>Вероятность реализации риска</strong></td>
                       <td>8</td>
                       <td><strong>Статус</strong></td>
                       <td>Оценен</td>
                     </tr>
-                    <tr>
+                    <tr class="table-info__tr table-info__tr--vam">
                       <td><strong>Влияние на бюджет</strong></td>
                       <td>100 000 ₽</td>
                       <td><strong>Назначен</strong></td>
                       <td>Лихолетова Е.</td>
                     </tr>
-                    <tr>
+                    <tr class="table-info__tr table-info__tr--vam">
                       <td><strong>Влияние на сроки</strong></td>
                       <td>20 дней</td>
                       <td><strong>Остаточный риск (бюджет)</strong></td>
                       <td>100 000 ₽</td>
                     </tr>
-                    <tr>
+                    <tr class="table-info__tr table-info__tr--vam">
                       <td><strong>Стратегия управления</strong></td>
                       <td>Принятие</td>
                       <td><strong>Плановая окупаемость стратегии</strong></td>
                       <td>100 %</td>
                     </tr>
-                    <tr>
+                    <tr class="table-info__tr table-info__tr--vam">
                       <td><strong>Влияние на качество, объем и бюджет проекта</strong></td>
                       <td>2</td>
                       <td><strong>Количество членов команды, оценивших риск</strong></td>

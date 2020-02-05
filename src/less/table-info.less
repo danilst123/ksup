@@ -2,13 +2,10 @@
   table-layout: fixed;
   width: 100%;
   color: #000000;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-
-  col {
-  }
 
   td {
     padding: 5px 10px 5px 0;
@@ -19,6 +16,7 @@
     }
 
     strong, b {
+      font-family: "Roboto Condensed", sans-serif;
       font-weight: 700;
     }
 
@@ -50,7 +48,7 @@
       }
     }
 
-    ul {
+    ul:not([class]) {
       line-height: 30px;
       li {
         &:before {
@@ -60,8 +58,22 @@
     }
   }
 
+  &__tr {
+    &--vam td {
+      vertical-align: middle;
+    }
+  }
+
+  &--biggerGap {
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
 
   &--searchResult {
+    font-family: "Roboto Condensed", sans-serif;
+
     col {
       &:nth-child(odd) {
         width: 160px;
@@ -74,19 +86,6 @@
       &:nth-child(odd) {
         width: 315px;
       }
-    }
-    td {
-      &:nth-child(even) {
-        font-family: "Roboto", sans-serif;
-      }
-    }
-  }
-
-  &--formCard {
-    td {
-      vertical-align: middle;
-      padding-top: 10px;
-      padding-bottom: 10px;
     }
   }
 
@@ -112,10 +111,6 @@
       padding-top: 8px;
       padding-bottom: 8px;
 
-      p + p {
-        font-family: 'Roboto', sans-serif;
-      }
-
       a {
         font-weight: 400;
         text-decoration: underline;
@@ -128,13 +123,18 @@
   }
 
   &--riskInfo {
-    font-family: 'Roboto', sans-serif;
     margin: 20px 0;
+  }
+
+  &--checkboxGrid {
+    width: auto;
+    table-layout: unset;
+    margin: -10px 0;
 
     td {
-      strong, b {
-        font-family: "Roboto Condensed", sans-serif;
-      }
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 55px;
     }
   }
 }

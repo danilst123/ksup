@@ -72,7 +72,7 @@
     }
   }
 
-  &--searchFilter {
+  &--regular {
     .checkbox {
       &__icon {
         border: 1px solid #a5c7db;
@@ -81,8 +81,8 @@
       }
 
       &__input:checked + .checkbox__icon {
-        background-color: #01b7ff;
-        border-color: #01b7ff;
+        background-color: #005d96;
+        border-color: #005d96;
       }
 
       &__title {
@@ -90,6 +90,15 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 1.4;
+      }
+    }
+  }
+
+  &--roboto {
+    .checkbox {
+      &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
       }
     }
   }

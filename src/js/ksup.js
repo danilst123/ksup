@@ -69,7 +69,7 @@ $(function() {
 
 
 	//datepicker
-	$('.input-date').datepicker({
+	$('.input-text--date').datepicker({
 	  todayButton: new Date()
 	});
 
