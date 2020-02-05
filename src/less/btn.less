@@ -38,6 +38,10 @@
     &:first-child:last-child {
       margin: 0;    
     }
+
+    [fill] {
+      transition: fill 0.3s;
+    }
   }
 
   &--bordered {
@@ -49,6 +53,10 @@
       background-color: #fff;
       color: lighten(#01b7ff, 20%);
       border-color: lighten(#01b7ff, 20%);
+
+      [fill] {
+        fill: lighten(#01b7ff, 20%);
+      }
     }
   }
 

@@ -1,0 +1,26 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    height: 30px;
+    border-radius: 2px;
+    color: #000000;
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    font-style: italic;
+    line-height: 30px;
+    padding: 0 10px;
+
+    & + & {
+      margin-left: 2px;
+    }
+
+    &:nth-child(1) {
+      background-color: #e3e1a9;
+    }
+    &:nth-child(2) {
+      background-color: #c1ebd1;
+    }
+  }
+}

@@ -1,36 +1,32 @@
 .block-content {
-	padding: 10px 0;
+
+	& + & {
+		margin-top: 25px;
+	}
 	
 	&__title {
-		display: block;
-		color: #015d96;
-		font-family: 'PF BeauSans Pro Bbook', sans-serif;
-		font-size: 12px;
-		font-weight: 500;
-		line-height: 14px;
-		margin-bottom: 5px;
-
-		&--grey {
-			color: #adadad;
-		}
+		color: #000000;
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 1.4;
+		margin-bottom: 10px;
 	}
 
 	&__text {
 		color: #000000;
-		font-family: 'PF BeauSans Pro', sans-serif;
-		font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.2;
-
-		img {
-			margin-right: 2px;
-			transform: translateY(2px);
-		}
+		line-height: 24px;
 
 		ul {
 			li {
+				display: flex;
+
 				&:before {
-					content: '— ';
+					content: '—';
+					margin-right: 10px;
 				}
 			}
 		}

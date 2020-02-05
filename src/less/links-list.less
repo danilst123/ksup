@@ -1,0 +1,44 @@
+.links-list {
+  padding: 0 30px;
+
+  &--riskInfo {
+    margin-top: 30px;
+  }
+
+  &__item + &__item {
+    margin-top: 20px;
+  }
+
+  &__link {
+    color: #005d96;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      color: #000000;
+    }
+
+    &--active {
+      font-weight: 700;
+      color: #000000;
+      position: relative;
+      pointer-events: none;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: #01b9ff;
+        border-radius: 50%;
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

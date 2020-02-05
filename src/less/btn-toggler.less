@@ -1,0 +1,62 @@
+.btn-toggler {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:first-child {
+      .btn {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+    &:last-child {
+      .btn {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: -2px;
+    }
+
+    .btn {
+      flex-shrink: 0;
+      border-radius: 0;
+      padding: 0 10px;
+      min-width: auto;
+
+      [fill] {
+        fill: #01b7ff;
+        transition: fill 0.3s;
+      }
+
+      &:hover {
+        border-color: lighten(#01b7ff, 20%);
+
+        [fill] {
+          fill: lighten(#01b7ff, 20%);;
+        }
+      }
+    }
+
+    input {
+      display: none;
+
+      &:checked + .btn {
+        background-color: #01b7ff;
+        cursor: default;
+
+        [fill] {
+          fill: #fff;
+        }
+
+        &:hover {
+          border-color: #01b7ff;
+          background-color: #01b7ff;
+
+          [fill] {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
