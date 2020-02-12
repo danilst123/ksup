@@ -1382,6 +1382,17 @@ h4.title {
   font-weight: 700;
   line-height: 18px;
 }
+.checkbox__title img,
+.checkbox__title svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: auto;
+}
+.checkbox__title img:first-child,
+.checkbox__title svg:first-child {
+  margin-right: 2px;
+}
 .checkbox__input:checked + .checkbox__icon {
   background-color: #005d96;
   border-color: #005d96;
