@@ -1,0 +1,53 @@
+.radio {
+  max-width: 100%; //ie fix
+  display: flex;
+  align-items: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #a5c7db;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    &:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s;
+    }
+  }
+
+  &__title {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__input:checked + &__icon {
+    &:after {
+      background-color: #005d96;
+    }
+  }
+}
+
+

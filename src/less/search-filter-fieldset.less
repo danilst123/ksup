@@ -12,7 +12,12 @@
     margin-bottom: 12px;
   }
 
+  &--columned &__legend {
+    max-width: 100%;
+  }
+
   &__all {
+    display: inline-block;
     color: #005d96;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
@@ -27,5 +32,11 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &--columned &__all {
+    position: static;
+    margin-top: 20px;
+    margin-left: 28px;
   }
 }
